@@ -10,3 +10,9 @@ __metaclass__ = PoolMeta
 class Opportunity(ContactMixin):
     __name__ = 'sale.opportunity'
     _contact_config_name = 'sale.configuration'
+
+    def _get_sale_opportunity(self):
+        sale = super(Opportunity, self)._get_sale_opportunity()
+        if self.contact:
+            sale.contact = self.contact
+        return sale
