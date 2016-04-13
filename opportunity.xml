@@ -6,13 +6,11 @@
 
         <record model="ir.ui.view" id="opportunity_view_form">
             <field name="model">sale.opportunity</field>
-            <field name="type">form</field>
             <field name="inherit" ref="sale_opportunity.opportunity_view_form"/>
             <field name="name">opportunity_form</field>
         </record>
         <record model="ir.ui.view" id="opportunity_view_tree">
             <field name="model">sale.opportunity</field>
-            <field name="type">tree</field>
             <field name="inherit" ref="sale_opportunity.opportunity_view_tree"/>
             <field name="name">opportunity_tree</field>
         </record>
