@@ -6,9 +6,8 @@ from trytond.modules.account_invoice_contact.invoice import ContactMixin
 __all__ = ['Opportunity']
 
 
-class Opportunity(ContactMixin):
+class Opportunity(ContactMixin, metaclass=PoolMeta):
     __name__ = 'sale.opportunity'
-    __metaclass__ = PoolMeta
     _contact_config_name = 'sale.configuration'
     _contact_config_template_field = 'party'
 
